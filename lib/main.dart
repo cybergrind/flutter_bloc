@@ -64,10 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             BlocBuilder<CounterBloc, CounterState>(
               builder: (context, state) {
-                Text(
+                return Text(
                   state.value.toString(),
                   style: Theme.of(context).textTheme.headline4,
-              )
+                );
               },
             ),
           ],
