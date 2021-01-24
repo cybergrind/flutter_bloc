@@ -6,7 +6,12 @@ void main() {
   group('CounterTest', () {
     blocTest('CounterTest',
         build: () => CounterBloc(),
-        act: (c) => c.add(Increase()),
+        act: (c) => c.add(Increment()),
         expect: [CounterState(1)]);
+
+    blocTest('Counter decrement',
+        build: () => CounterBloc(),
+        act: (c) => c.add(Decrement()),
+        expect: [CounterState(-1)]);
   });
 }

@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('before increase');
-          context.read<CounterBloc>().add(Increase());
+          context.read<CounterBloc>().add(Increment());
         },
         tooltip: 'Increment',
         child: Icon(Icons.add),

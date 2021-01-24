@@ -15,11 +15,11 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
     CounterEvent event,
   ) async* {
     switch (event.runtimeType) {
-      case Increase:
+      case Increment:
         print('yield counter + 1');
         yield CounterState(this.state.value + 1);
         break;
-      case Decrease:
+      case Decrement:
         yield CounterState(this.state.value - 1);
         break;
       default:
